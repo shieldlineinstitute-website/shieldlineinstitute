@@ -15,7 +15,7 @@ const Footer = () => {
               />
             </Link>
             <p className="text-white/70 mb-6 leading-relaxed">
-              A premium, doctor-led driving and road safety institute in Abijo-Lekki, Lagos. Training safer, healthier, and more confident drivers.
+              A reliable, doctor-led driving and road safety institute in Abijo-Lekki, Lagos. Training safer, healthier, and more confident drivers.
             </p>
             <div className="flex items-center gap-4">
               <a href="#" aria-label="Facebook" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#00A896] transition-colors">
@@ -79,7 +79,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-3">
                 <i className="fa-solid fa-envelope text-[#00A896]"></i>
-                <a href="mailto:info@shieldlinedriving.com" className="text-white/70 hover:text-white transition-colors">info@shieldlinedriving.com</a>
+                <a href="mailto:shieldlineinstitute@gmail.com" className="text-white/70 hover:text-white transition-colors">shieldlineinstitute@gmail.com</a>
               </li>
               <li className="flex items-center gap-3">
                 <i className="fa-solid fa-clock text-[#00A896]"></i>

@@ -274,12 +274,12 @@ const Homepage = () => {
             </div>
             <div className="grid grid-cols-3 gap-6 mt-10 pt-16 border-t border-[#E2E8F0]">
               <div className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-[#0A2463] mb-2">98%</div>
-                <div className="text-[#64748B]">Pass Rate</div>
+                <div className="text-4xl md:text-5xl font-bold text-[#1ec7c7] mb-2">10+</div>
+                <div className="text-[#64748B]">Corporate Clients</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-[#00A896] mb-2">10+</div>
-                <div className="text-[#64748B]">Corporate Clients</div>
+                <div className="text-4xl md:text-5xl font-bold text-[#0A2463] mb-2">98%</div>
+                <div className="text-[#64748B]">Pass Rate</div>
               </div>
               <div className="text-center">
                 <div className="text-4xl md:text-5xl font-bold text-[#D4AF37] mb-2">20+</div>
@@ -289,26 +289,29 @@ const Homepage = () => {
           </div>
         </section>
 
-        <section className="bg-gradient-to-br from-[#1E3A8A] to-gray-700 py-24 relative overflow-hidden">
-          <div className="absolute inset-0 opacity-10">
-            <div className="absolute top-10 left-10 w-40 h-40 border border-blue-700 rounded-full"></div>
-            <div className="absolute bottom-20 right-20 w-60 h-60 border border-white rounded-full"></div>
-            <div className="absolute top-1/2 left-1/3 w-32 h-32 border border-white rounded-full"></div>
+        <section className="bg-gray-100 py-24 relative overflow-hidden">
+          <div className="absolute inset-0 opacity-40 pointer-events-none overflow-hidden">
+            {/* Soft Teal Glow */}
+            <div className="absolute top-[-5%] left-[-5%] w-72 h-72 bg-[#00A896] rounded-full blur-[100px] animate-pulse"></div>
+
+            {/* Soft Blue Glow */}
+            <div className="absolute bottom-20 right-[-10%] w-96 h-96 bg-[#f5a52f] rounded-full blur-[120px]">
+            </div>
           </div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 lg:px-6">
             <div className="text-center mb-16">
-              <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-4">
-                <i className="fa-solid fa-list-check text-white"></i>
-                <span className="text-white font-medium text-sm">Simple Process</span>
+              <div className="inline-flex items-center gap-2 bg-white backdrop-blur-sm px-4 py-2 rounded-full mb-4">
+                <i className="fa-solid fa-list-check text-black"></i>
+                <span className="text-black font-medium text-sm">Simple Process</span>
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">How Shieldline Works</h2>
-              <p className="text-white/70 text-lg max-w-2xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-[#0A2463] mb-4">How Shieldline Works</h2>
+              <p className="text-gray-700 text-lg max-w-2xl mx-auto">
                 Our structured approach ensures you receive the best training and support throughout your journey to becoming a safe, confident driver.
               </p>
             </div>
             <div className="grid md:grid-cols-4 gap-8">
               <div className="relative">
-                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <div className="bg-[#1E3A8A] backdrop-blur-sm rounded-2xl p-8 text-center border border-white/20">
                   <div className="w-16 h-16 bg-[#00A896] rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-white shadow-lg shadow-[#00A896]/50">1</div>
                   <h3 className="text-xl font-bold text-white mb-3">Book Consultation</h3>
                   <p className="text-white/70">
@@ -316,35 +319,35 @@ const Homepage = () => {
                   </p>
                 </div>
                 <div className="hidden md:block absolute top-1/2 -right-4 transform -translate-y-1/2">
-                  <i className="fa-solid fa-chevron-right text-white/50 text-2xl"></i>
+                  <i className="fa-solid fa-chevron-right text-[#0A2463] text-2xl"></i>
                 </div>
               </div>
               <div className="relative">
-                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center border border-white/20 hover:bg-white/20 transition-all duration-300">
-                  <div className="w-16 h-16 bg-[#D4AF37] rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-white shadow-lg shadow-[#D4AF37]/50">2</div>
+                <div className="bg-[#1E3A8A] backdrop-blur-sm rounded-2xl p-8 text-center border border-white/20">
+                  <div className="w-16 h-16 bg-[#00A896] rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-white shadow-lg shadow-[#00A896]/50">2</div>
                   <h3 className="text-xl font-bold text-white mb-3">Medical Safety Audit</h3>
                   <p className="text-white/70">
                     Complete our comprehensive health screening to ensure road readiness.
                   </p>
                 </div>
                 <div className="hidden md:block absolute top-1/2 -right-4 transform -translate-y-1/2">
-                  <i className="fa-solid fa-chevron-right text-white/50 text-2xl"></i>
+                  <i className="fa-solid fa-chevron-right text-[#0A2463] text-2xl"></i>
                 </div>
               </div>
               <div className="relative">
-                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center border border-white/20 hover:bg-white/20 transition-all duration-300">
-                  <div className="w-16 h-16 bg-[#F59E0B] rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-white shadow-lg shadow-[#F59E0B]/50">3</div>
+                <div className="bg-[#1E3A8A] backdrop-blur-sm rounded-2xl p-8 text-center border border-white/20">
+                  <div className="w-16 h-16 bg-[#00A896] rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-white shadow-lg shadow-[#00A896]/50">3</div>
                   <h3 className="text-xl font-bold text-white mb-3">Begin Training</h3>
                   <p className="text-white/70">
                     Start structured driving lessons with our certified instructors and dual-control vehicles.
                   </p>
                 </div>
                 <div className="hidden md:block absolute top-1/2 -right-4 transform -translate-y-1/2">
-                  <i className="fa-solid fa-chevron-right text-white/50 text-2xl"></i>
+                  <i className="fa-solid fa-chevron-right text-[#0A2463] text-2xl"></i>
                 </div>
               </div>
               <div className="relative">
-                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <div className="bg-[#1E3A8A] backdrop-blur-sm rounded-2xl p-8 text-center border border-white/20">
                   <div className="w-16 h-16 bg-[#14B8A6] rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-white shadow-lg shadow-[#14B8A6]/50">4</div>
                   <h3 className="text-xl font-bold text-white mb-3">Assessment & License</h3>
                   <p className="text-white/70">
@@ -381,19 +384,19 @@ const Homepage = () => {
                 <i className="fa-solid fa-calendar-check"></i>
                 <span>Register & Start</span>
               </Link>
-              <a href="https://wa.me/2348012345678" target="_blank" rel="noreferrer" className="bg-[#25D366] hover:bg-[#20BD5A] text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 shadow-xl shadow-[#25D366]/30 flex items-center gap-2 text-lg">
+              <a href="https://wa.me/2348084915273" target="_blank" rel="noreferrer" className="bg-[#25D366] hover:bg-[#20BD5A] text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 shadow-xl shadow-[#25D366]/30 flex items-center gap-2 text-lg">
                 <i className="fa-brands fa-whatsapp text-xl"></i>
                 <span>WhatsApp Us</span>
               </a>
             </div>
             <div className="flex flex-wrap justify-center gap-8 text-white/80">
-              <a href="tel:+2348012345678" className="flex items-center gap-2 hover:text-white transition-colors">
+              <a href="tel:+2348084915273" className="flex items-center gap-2 hover:text-white transition-colors">
                 <i className="fa-solid fa-phone"></i>
-                <span>+234 801 234 5678</span>
+                <span>+234 808 491 5273</span>
               </a>
-              <a href="mailto:info@shieldlinedriving.com" className="flex items-center gap-2 hover:text-white transition-colors">
+              <a href="mailto:shieldlineinstitute@gmail.com" className="flex items-center gap-2 hover:text-white transition-colors">
                 <i className="fa-solid fa-envelope"></i>
-                <span>info@shieldlinedriving.com</span>
+                <span>shieldlineinstitute@gmail.com</span>
               </a>
               <span className="flex items-center gap-2">
                 <i className="fa-solid fa-location-dot"></i>
