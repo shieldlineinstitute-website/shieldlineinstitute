@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import shieldlogo from '../images/shieldlinelogo.png';
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -8,13 +10,13 @@ const Header = () => {
       <div className="hidden lg:block bg-[#0A2463] text-white">
         <div className="max-w-7xl mx-auto px-6 py-2 flex justify-between items-center text-sm">
           <div className="flex items-center gap-6">
-            <a href="tel:+2348012345678" className="flex items-center gap-2 hover:text-[#00A896] transition-colors">
+            <a href="tel:+2348084915273" className="flex items-center gap-2 hover:text-[#00A896] transition-colors">
               <i className="fa-solid fa-phone text-xs"></i>
-              <span>+234 801 234 5678</span>
+              <span>+234 808 491 5273</span>
             </a>
             <a href="mailto:info@shieldlinedriving.com" className="flex items-center gap-2 hover:text-[#00A896] transition-colors">
               <i className="fa-solid fa-envelope text-xs"></i>
-              <span>info@shieldlinedriving.com</span>
+              <span>shieldlineinstitute@gmail.com</span>
             </a>
           </div>
           <div className="flex items-center gap-4">
@@ -39,19 +41,19 @@ const Header = () => {
 
       <nav className="bg-white border-b border-[#E2E8F0]">
         <div className="max-w-7xl mx-auto px-4 lg:px-6">
-          <div className="flex items-center justify-between h-20">
-            <a href="/" className="flex items-center">
+          <div className="flex items-center justify-between h-20 md:h-17">
+            <Link to="/" className="flex items-center">
               <img
-                src="https://assets.ls-assets.com/uploads/ee647108-7cc9-47b0-a506-24f068789d03/b377731e-3b9b-4a8e-a94c-8ebed011e73a.png?w=200"
+                src={shieldlogo}
                 alt="Shieldline Driving Institute"
                 className="h-12 w-auto"
               />
-            </a>
+            </Link>
 
             <div className="hidden lg:flex items-center gap-8">
-              <a href="/" className="text-[#0A2463] font-semibold hover:text-[#00A896] transition-colors">
+              <Link to="/" className="text-[#0A2463] font-semibold hover:text-[#00A896] transition-colors">
                 Home
-              </a>
+              </Link>
 
               <div className="relative group">
                 <button className="flex items-center gap-1 text-[#1A202C] font-medium hover:text-[#00A896] transition-colors py-6">
@@ -60,48 +62,46 @@ const Header = () => {
                 </button>
                 <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
                   <div className="bg-white rounded-xl shadow-xl border border-[#E2E8F0] p-4 min-w-64">
-                    <a href="/basic-student-training" className="block px-4 py-3 rounded-lg hover:bg-[#F0F4F9] transition-colors">
+                    <Link to="/basic-student-training" className="block px-4 py-3 rounded-lg hover:bg-[#F0F4F9] transition-colors">
                       <div className="font-medium text-[#0A2463]">Basic Student Training</div>
                       <div className="text-sm text-[#64748B]">For first-time drivers</div>
-                    </a>
-                    <a href="/corporate-fleet-training" className="block px-4 py-3 rounded-lg hover:bg-[#F0F4F9] transition-colors mt-1">
+                    </Link>
+                    <Link to="/corporate-fleet-training" className="block px-4 py-3 rounded-lg hover:bg-[#F0F4F9] transition-colors mt-1">
                       <div className="font-medium text-[#0A2463]">Corporate Fleet Training</div>
                       <div className="text-sm text-[#64748B]">For companies & organizations</div>
-                    </a>
-                    <a href="/medical-safety-audit" className="block px-4 py-3 rounded-lg hover:bg-[#F0F4F9] transition-colors mt-1">
+                    </Link>
+                    <Link to="/medical-safety-audit" className="block px-4 py-3 rounded-lg hover:bg-[#F0F4F9] transition-colors mt-1">
                       <div className="font-medium text-[#0A2463]">Medical Safety Audit</div>
                       <div className="text-sm text-[#64748B]">Health screening & assessment</div>
-                    </a>
-                    <a href="/license-support" className="block px-4 py-3 rounded-lg hover:bg-[#F0F4F9] transition-colors mt-1">
+                    </Link>
+                    <Link to="/license-support" className="block px-4 py-3 rounded-lg hover:bg-[#F0F4F9] transition-colors mt-1">
                       <div className="font-medium text-[#0A2463]">License Support</div>
                       <div className="text-sm text-[#64748B]">FRSC documentation help</div>
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
 
-              <a href="/about" className="text-[#1A202C] font-medium hover:text-[#00A896] transition-colors">
+              <Link to="/about" className="text-[#1A202C] font-medium hover:text-[#00A896] transition-colors">
                 About
-              </a>
-              <a href="/testimonials" className="text-[#1A202C] font-medium hover:text-[#00A896] transition-colors">
-                Testimonials
-              </a>
-              <a href="/blog" className="text-[#1A202C] font-medium hover:text-[#00A896] transition-colors">
+              </Link>
+              <Link to="/blog" className="text-[#1A202C] font-medium hover:text-[#00A896] transition-colors">
                 Blog
-              </a>
-              <a href="/contact" className="text-[#1A202C] font-medium hover:text-[#00A896] transition-colors">
+              </Link>
+              <Link to="/faq" className="text-[#1A202C] font-medium hover:text-[#00A896] transition-colors">
+                FAQ
+              </Link>
+              <Link to="/contact" className="text-[#1A202C] font-medium hover:text-[#00A896] transition-colors">
                 Contact
-              </a>
+              </Link>
+
+              <Link to="/contact" className="flex flex-col items-center bg-[#0a2d82] hover:bg-[#1E3A8A] text-white px-6 py-2 rounded-lg font-semibold transition-colors shadow-lg shadow-[#0A2463]/20">
+                <span>Register Today</span>
+                <span className="text-[0.6rem] font-normal uppercase mt-1 items-center">See How it Works</span>
+              </Link>
             </div>
 
-            <div className="hidden lg:flex items-center gap-4">
-              <a href="https://wa.me/2348012345678" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-[#00A896] hover:text-[#0A2463] transition-colors font-medium">
-                <i className="fa-brands fa-whatsapp text-xl"></i>
-              </a>
-              <a href="/book-consultation" className="bg-[#0A2463] hover:bg-[#1E3A8A] text-white px-6 py-3 rounded-lg font-semibold transition-colors shadow-lg shadow-[#0A2463]/20">
-                Book Your Consultation
-              </a>
-            </div>
+
 
             <button
               type="button"
@@ -117,31 +117,31 @@ const Header = () => {
 
         <div className={`lg:hidden bg-white border-t border-[#E2E8F0] ${mobileMenuOpen ? 'block' : 'hidden'}`}>
           <div className="max-w-7xl mx-auto px-4 py-4 space-y-3">
-            <a href="/" className="block py-2 text-[#0A2463] font-semibold">
+            <Link to="/" className="block py-2 text-[#0A2463] font-semibold">
               Home
-            </a>
+            </Link>
             <div className="py-2">
               <div className="font-semibold text-[#0A2463] mb-2">Programs</div>
               <div className="pl-4 space-y-2">
-                <a href="/basic-student-training" className="block py-2 text-[#64748B]">Basic Student Training</a>
-                <a href="/corporate-fleet-training" className="block py-2 text-[#64748B]">Corporate Fleet Training</a>
-                <a href="/medical-safety-audit" className="block py-2 text-[#64748B]">Medical Safety Audit</a>
-                <a href="/license-support" className="block py-2 text-[#64748B]">License Support</a>
+                <Link to="/basic-student-training" className="block py-2 text-[#64748B]">Basic Student Training</Link>
+                <Link to="/corporate-fleet-training" className="block py-2 text-[#64748B]">Corporate Fleet Training</Link>
+                <Link to="/medical-safety-audit" className="block py-2 text-[#64748B]">Medical Safety Audit</Link>
+                <Link to="/license-support" className="block py-2 text-[#64748B]">License Support</Link>
               </div>
             </div>
-            <a href="/about" className="block py-2 text-[#0A2463]">About</a>
-            <a href="/testimonials" className="block py-2 text-[#0A2463]">Testimonials</a>
-            <a href="/blog" className="block py-2 text-[#0A2463]">Blog</a>
-            <a href="/contact" className="block py-2 text-[#0A2463]">Contact</a>
+            <Link to="/about" className="block py-2 text-[#0A2463]">About</Link>
+            <Link to="/blog" className="block py-2 text-[#0A2463]">Blog</Link>
+            <Link to="/faq" className="block py-2 text-[#0A2463]">FAQ</Link>
+            <Link to="/contact" className="block py-2 text-[#0A2463]">Contact</Link>
             <div className="pt-4 border-t border-[#E2E8F0]">
-              <a href="/book-consultation" className="block w-full bg-[#0A2463] text-white text-center py-3 rounded-lg font-semibold">
-                Book Your Consultation
-              </a>
+              <Link to="/contact" className="block w-full bg-[#0A2463] text-white text-center py-3 rounded-lg font-semibold">
+                Register & Start
+              </Link>
             </div>
           </div>
         </div>
       </nav>
-    </header>
+    </header >
   );
 };
 
