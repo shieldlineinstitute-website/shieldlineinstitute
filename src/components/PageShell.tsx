@@ -3,8 +3,11 @@ import Footer from './Footer';
 import Header from './Header';
 
 interface FAQItem {
-  question: string;
-  answer: string;
+  question?: string;
+  answer?: string;
+  heading?: string;
+  body?: string;
+  subheading?: string;
 }
 
 interface PageShellProps {
@@ -38,10 +41,10 @@ const PageShell = ({ title, subtitle, description, children, faqs }: PageShellPr
               <h2 className="text-3xl md:text-4xl font-bold text-[#0A2463]">Frequently Asked Questions</h2>
             </div>
             <div className="grid gap-6 md:grid-cols-2">
-              {faqs.map((faq) => (
-                <div key={faq.question} className="rounded-3xl border border-[#E2E8F0] p-6 shadow-sm hover:shadow-xl hover:border-[#00A896]/40 transition-all duration-300">
-                  <h3 className="text-xl font-semibold text-[#0A2463] mb-3">{faq.question}</h3>
-                  <p className="text-[#64748B] leading-relaxed">{faq.answer}</p>
+              {faqs.map((faq, index) => (
+                <div key={faq.question || faq.heading || index} className="rounded-3xl border border-[#E2E8F0] p-6 shadow-sm hover:shadow-xl hover:border-[#00A896]/40 transition-all duration-300">
+                  <h3 className="text-xl font-semibold text-[#0A2463] mb-3">{faq.question || faq.heading}</h3>
+                  <p className="text-[#64748B] leading-relaxed">{faq.answer || faq.body}</p>
                 </div>
               ))}
             </div>

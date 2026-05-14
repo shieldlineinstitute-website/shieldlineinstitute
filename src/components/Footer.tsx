@@ -78,6 +78,10 @@ const Footer = () => {
                 <a href="tel:+2348084915273" className="text-white/70 hover:text-white transition-colors">+234 808 491 5273</a>
               </li>
               <li className="flex items-center gap-3">
+                <i className="fa-solid fa-phone text-[#00A896]"></i>
+                <a href="tel:+2348036746384" className="text-white/70 hover:text-white transition-colors">+234 803 674 6384</a>
+              </li>
+              <li className="flex items-center gap-3">
                 <i className="fa-solid fa-envelope text-[#00A896]"></i>
                 <a href="mailto:shieldlineinstitute@gmail.com" className="text-white/70 hover:text-white transition-colors">shieldlineinstitute@gmail.com</a>
               </li>

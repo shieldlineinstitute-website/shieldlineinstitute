@@ -27,10 +27,10 @@ const Homepage = () => {
                 <span className="text-white/90 text-sm font-medium">Doctor-Led Institute</span>
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-                Driving & Safety Training for
-                <span className="text-[#04cfb8]"> Safer Roads</span> in Lagos
+                Driving Training & Medical Screening for
+                <span className="text-[#04cfb8]"> Safer Drivers</span> in Lagos
               </h1>
-              <p className="text-lg md:text-xl text-white/80 mb-8 leading-relaxed">
+              <p className="text-lg md:text-lg text-white/80 mb-8 leading-relaxed">
                 Shieldline Driving Institute combines medical screening, defensive driving, and FRSC-aligned instruction to produce road-ready drivers who are physically and mentally fit for Nigerian roads.
               </p>
               <div className="flex flex-wrap gap-4 mb-10">
@@ -104,7 +104,7 @@ const Homepage = () => {
                   </p>
                   <div className="flex flex-wrap gap-3 mb-6">
                     <span className="bg-[#F0F4F9] text-[#0A2463] px-4 py-2 rounded-full text-sm font-medium">6-8 Weeks</span>
-                    <span className="bg-[#F0F4F9] text-[#0A2463] px-4 py-2 rounded-full text-sm font-medium">Medical Included</span>
+                    <span className="bg-[#F0F4F9] text-[#0A2463] px-4 py-2 rounded-full text-sm font-medium">Medicals Included</span>
                     <span className="bg-[#F0F4F9] text-[#0A2463] px-4 py-2 rounded-full text-sm font-medium">Dual Control</span>
                   </div>
                   <Link to="/basic-student-training" className="inline-flex items-center gap-2 text-[#00A896] font-semibold hover:text-[#0A2463] transition-colors">
@@ -201,16 +201,13 @@ const Homepage = () => {
           </div>
         </section>
 
-        <section
-          className="relative min-h-[90vh] flex items-center pt-20"
-          style={{
-            backgroundImage:
-              [`url('${supportpng}')`],
-            backgroundSize: 'cover',
-            backgroundPosition: 'center'
-          }}
-        >
-          <div className="max-w-7xl mx-auto px-4 lg:px-6">
+        <section className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden z-0">
+          <img
+            src={supportpng}
+            alt="Shieldline Driving Support"
+            className="absolute inset-0 w-full h-full object-cover z-0"
+          />
+          <div className="relative z-10 max-w-7xl mx-auto px-4 lg:px-6">
             <div className="text-center mb-16">
               <div className="inline-flex items-center gap-2 bg-white/90 px-4 py-2 rounded-full mb-4">
                 <i className="fa-solid fa-shield-halved text-[#0A2463]"></i>
@@ -233,7 +230,7 @@ const Homepage = () => {
                 <div className="w-20 h-20 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-all duration-300">
                   <i className="fa-solid fa-user-doctor text-3xl text-white"></i>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">Doctor-Led Oversight</h3>
+                <h3 className="text-xl font-bold text-white mb-3">Doctor-Led Management</h3>
                 <p className="text-teal-50">
                   Medical authority built into every step of the training process. Your health is our priority.
                 </p>
@@ -274,8 +271,8 @@ const Homepage = () => {
             </div>
             <div className="grid grid-cols-3 gap-6 mt-10 pt-16 border-t border-[#E2E8F0]">
               <div className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-[#1ec7c7] mb-2">10+</div>
-                <div className="text-[#64748B]">Corporate Clients</div>
+                <div className="text-4xl md:text-5xl font-bold text-[#1ec7c7] mb-2">30+</div>
+                <div className="text-gray-700">Corporate Clients</div>
               </div>
               <div className="text-center">
                 <div className="text-4xl md:text-5xl font-bold text-[#0A2463] mb-2">98%</div>
@@ -313,7 +310,7 @@ const Homepage = () => {
               <div className="relative">
                 <div className="bg-[#1E3A8A] backdrop-blur-sm rounded-2xl p-8 text-center border border-white/20">
                   <div className="w-16 h-16 bg-[#00A896] rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-white shadow-lg shadow-[#00A896]/50">1</div>
-                  <h3 className="text-xl font-bold text-white mb-3">Book Consultation</h3>
+                  <h3 className="text-xl font-bold text-white mb-3">Register With Us</h3>
                   <p className="text-white/70">
                     Schedule your free consultation to discuss your training needs and goals.
                   </p>
@@ -408,7 +405,7 @@ const Homepage = () => {
       </main>
 
       <Footer />
-    </div>
+    </div >
   );
 };
 

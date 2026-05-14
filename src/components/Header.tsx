@@ -14,6 +14,10 @@ const Header = () => {
               <i className="fa-solid fa-phone text-xs"></i>
               <span>+234 808 491 5273</span>
             </a>
+            <a href="tel:+2348036746384" className="flex items-center gap-2 hover:text-[#00A896] transition-colors">
+              <i className="fa-solid fa-phone text-xs"></i>
+              <span>+234 803 674 6384</span>
+            </a>
             <a href="mailto:info@shieldlinedriving.com" className="flex items-center gap-2 hover:text-[#00A896] transition-colors">
               <i className="fa-solid fa-envelope text-xs"></i>
               <span>shieldlineinstitute@gmail.com</span>
