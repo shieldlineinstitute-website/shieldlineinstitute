@@ -34,7 +34,7 @@ const Homepage = () => {
                 Shieldline Driving Institute combines medical screening, defensive driving, and FRSC-aligned instruction to produce road-ready drivers who are physically and mentally fit for Nigerian roads.
               </p>
               <div className="flex flex-wrap gap-4 mb-10">
-                <Link to="/contact" className="bg-[#00A896] hover:bg-[#00D9B5] text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 shadow-xl shadow-[#00A896]/30 flex items-center gap-2">
+                <Link to="/booking" className="bg-[#00A896] hover:bg-[#00D9B5] text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 shadow-xl shadow-[#00A896]/30 flex items-center gap-2">
                   <span>Register Now</span>
                   <i className="fa-solid fa-arrow-right"></i>
                 </Link>

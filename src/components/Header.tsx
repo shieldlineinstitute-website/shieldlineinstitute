@@ -99,7 +99,7 @@ const Header = () => {
                 Contact
               </Link>
 
-              <Link to="/contact" className="flex flex-col items-center bg-[#0a2d82] hover:bg-[#1E3A8A] text-white px-6 py-2 rounded-lg font-semibold transition-colors shadow-lg shadow-[#0A2463]/20">
+              <Link to="/booking" className="flex flex-col items-center bg-[#0a2d82] hover:bg-[#1E3A8A] text-white px-6 py-2 rounded-lg font-semibold transition-colors shadow-lg shadow-[#0A2463]/20">
                 <span>Register Today</span>
                 <span className="text-[0.6rem] font-normal uppercase mt-1 items-center">See How it Works</span>
               </Link>
@@ -138,7 +138,7 @@ const Header = () => {
             <Link to="/faq" className="block py-2 text-[#0A2463]">FAQ</Link>
             <Link to="/contact" className="block py-2 text-[#0A2463]">Contact</Link>
             <div className="pt-4 border-t border-[#E2E8F0]">
-              <Link to="/contact" className="block w-full bg-[#0A2463] text-white text-center py-3 rounded-lg font-semibold">
+              <Link to="/booking" className="block w-full bg-[#0A2463] text-white text-center py-3 rounded-lg font-semibold">
                 Register & Start
               </Link>
             </div>
