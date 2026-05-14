@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import shieldlogo from '../images/shieldlinelogo.png';
+import BookingFormModal from './BookingFormModal';
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm">
@@ -96,13 +98,13 @@ const Header = () => {
                 FAQ
               </Link>
               <Link to="/contact" className="text-[#1A202C] font-medium hover:text-[#00A896] transition-colors">
-                Contact
+                Contact Us
               </Link>
 
-              <Link to="/booking" className="flex flex-col items-center bg-[#0a2d82] hover:bg-[#1E3A8A] text-white px-6 py-2 rounded-lg font-semibold transition-colors shadow-lg shadow-[#0A2463]/20">
+              <button onClick={() => setIsBookingModalOpen(true)} className="flex flex-col items-center bg-[#0a2d82] hover:bg-[#1E3A8A] text-white px-6 py-2 rounded-lg font-semibold transition-colors shadow-lg shadow-[#0A2463]/20">
                 <span>Register Today</span>
                 <span className="text-[0.6rem] font-normal uppercase mt-1 items-center">See How it Works</span>
-              </Link>
+              </button>
             </div>
 
 
@@ -133,18 +135,20 @@ const Header = () => {
                 <Link to="/license-support" className="block py-2 text-[#64748B]">License Support</Link>
               </div>
             </div>
-            <Link to="/about" className="block py-2 text-[#0A2463]">About</Link>
+            <Link to="/about" className="block py-2 text-[#0A2463]">About Us</Link>
             <Link to="/blog" className="block py-2 text-[#0A2463]">Blog</Link>
             <Link to="/faq" className="block py-2 text-[#0A2463]">FAQ</Link>
-            <Link to="/contact" className="block py-2 text-[#0A2463]">Contact</Link>
+            <Link to="/contact" className="block py-2 text-[#0A2463]">Contact Us</Link>
             <div className="pt-4 border-t border-[#E2E8F0]">
-              <Link to="/booking" className="block w-full bg-[#0A2463] text-white text-center py-3 rounded-lg font-semibold">
+              <button onClick={() => { setIsBookingModalOpen(true); setMobileMenuOpen(false); }} className="block w-full bg-[#0A2463] hover:bg-[#1E3A8A] text-white text-center py-3 rounded-lg font-semibold transition-colors">
                 Register & Start
-              </Link>
+              </button>
             </div>
           </div>
         </div>
       </nav>
+
+      <BookingFormModal isOpen={isBookingModalOpen} onClose={() => setIsBookingModalOpen(false)} />
     </header >
   );
 };

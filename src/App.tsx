@@ -8,7 +8,6 @@ import BasicStudentTraining from './pages/BasicStudentTraining';
 import CorporateFleetTraining from './pages/CorporateFleetTraining';
 import MedicalSafetyAudit from './pages/MedicalSafetyAudit';
 import LicenseSupport from './pages/LicenseSupport';
-import Booking from './pages/Booking';
 import NotFound from './pages/NotFound';
 
 function App() {
@@ -20,7 +19,6 @@ function App() {
         <Route path="/corporate-fleet-training" element={<CorporateFleetTraining />} />
         <Route path="/medical-safety-audit" element={<MedicalSafetyAudit />} />
         <Route path="/license-support" element={<LicenseSupport />} />
-        <Route path="/booking" element={<Booking />} />
         <Route path="/about" element={<About />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/faq" element={<FAQ />} />

@@ -1,9 +1,16 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import BookingFormModal from './components/BookingFormModal';
 import supportpng from './images/supportpng.png';
+import studentpng from './images/student.png'
+import fleetpng from './images/fleetpng.png';
+import auditpng from './images/audit.png';
+import licensepng from './images/driving.png';
 
 const Homepage = () => {
+  const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
   return (
     <div className="min-h-screen bg-white font-[Inter]">
       <Header />
@@ -34,10 +41,10 @@ const Homepage = () => {
                 Shieldline Driving Institute combines medical screening, defensive driving, and FRSC-aligned instruction to produce road-ready drivers who are physically and mentally fit for Nigerian roads.
               </p>
               <div className="flex flex-wrap gap-4 mb-10">
-                <Link to="/booking" className="bg-[#00A896] hover:bg-[#00D9B5] text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 shadow-xl shadow-[#00A896]/30 flex items-center gap-2">
+                <button onClick={() => setIsBookingModalOpen(true)} className="bg-[#00A896] hover:bg-[#00D9B5] text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 shadow-xl shadow-[#00A896]/30 flex items-center gap-2">
                   <span>Register Now</span>
                   <i className="fa-solid fa-arrow-right"></i>
-                </Link>
+                </button>
                 <Link to="/basic-student-training" className="bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white border border-white/30 px-8 py-4 rounded-lg font-semibold transition-all duration-300 flex items-center gap-2">
                   <span>View Training Programs</span>
                 </Link>
@@ -88,7 +95,7 @@ const Homepage = () => {
               <div className="bg-white rounded-3xl overflow-hidden shadow-lg shadow-[#0A2463]/5 group hover:shadow-2xl transition-all duration-500">
                 <div className="relative h-64 overflow-hidden">
                   <img
-                    src="https://assets.ls-assets.com/provider/istock/2241396789.jpg?w=768"
+                    src={studentpng}
                     alt="Student learning to drive"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   />
@@ -116,7 +123,7 @@ const Homepage = () => {
               <div className="bg-white rounded-3xl overflow-hidden shadow-lg shadow-[#0A2463]/5 group hover:shadow-2xl transition-all duration-500">
                 <div className="relative h-64 overflow-hidden">
                   <img
-                    src="https://assets.ls-assets.com/provider/istock/2184648574.jpg?w=768"
+                    src={fleetpng}
                     alt="Corporate fleet training"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   />
@@ -144,7 +151,7 @@ const Homepage = () => {
               <div className="bg-white rounded-3xl overflow-hidden shadow-lg shadow-[#0A2463]/5 group hover:shadow-2xl transition-all duration-500">
                 <div className="relative h-64 overflow-hidden">
                   <img
-                    src="https://assets.ls-assets.com/provider/istock/2247823007.jpg?w=768"
+                    src={auditpng}
                     alt="Medical safety check"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   />
@@ -159,7 +166,7 @@ const Homepage = () => {
                     A comprehensive health screening service that evaluates your fitness for driving. Includes vision tests, blood pressure checks, and medical fitness recommendations.
                   </p>
                   <div className="flex flex-wrap gap-3 mb-6">
-                    <span className="bg-[#F0F4F9] text-[#0A2463] px-4 py-2 rounded-full text-sm font-medium">30-45 Minutes</span>
+                    <span className="bg-[#F0F4F9] text-[#0A2463] px-4 py-2 rounded-full text-sm font-medium">45-90 Minutes</span>
                     <span className="bg-[#F0F4F9] text-[#0A2463] px-4 py-2 rounded-full text-sm font-medium">Doctor Reviewed</span>
                     <span className="bg-[#F0F4F9] text-[#0A2463] px-4 py-2 rounded-full text-sm font-medium">Privacy Protected</span>
                   </div>
@@ -172,7 +179,7 @@ const Homepage = () => {
               <div className="bg-white rounded-3xl overflow-hidden shadow-lg shadow-[#0A2463]/5 group hover:shadow-2xl transition-all duration-500">
                 <div className="relative h-64 overflow-hidden">
                   <img
-                    src="https://assets.ls-assets.com/provider/istock/2214073896.jpg?w=768"
+                    src={licensepng}
                     alt="License support"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   />
@@ -404,6 +411,7 @@ const Homepage = () => {
         </section>
       </main>
 
+      <BookingFormModal isOpen={isBookingModalOpen} onClose={() => setIsBookingModalOpen(false)} />
       <Footer />
     </div >
   );
