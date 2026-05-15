@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { ScrollToTopLink } from './ScrollToTop';
 import shieldlogo from '../images/shieldlinelogo.png';
 import BookingFormModal from './BookingFormModal';
 
@@ -40,6 +40,9 @@ const Header = () => {
               <a href="#" aria-label="Twitter" className="hover:text-[#00A896] transition-colors">
                 <i className="fa-brands fa-twitter"></i>
               </a>
+              <a href="https://wa.me/2348084915273" target="_blank" rel="noreferrer" aria-label="WhatsApp" className="hover:text-[#00A896] transition-colors">
+                <i className="fa-brands fa-whatsapp"></i>
+              </a>
             </div>
           </div>
         </div>
@@ -48,18 +51,18 @@ const Header = () => {
       <nav className="bg-white border-b border-[#E2E8F0]">
         <div className="max-w-7xl mx-auto px-4 lg:px-6">
           <div className="flex items-center justify-between h-20 md:h-16">
-            <Link to="/" className="flex items-center">
+            <ScrollToTopLink to="/" className="flex items-center">
               <img
                 src={shieldlogo}
                 alt="Shieldline Driving Institute"
                 className="h-12 w-auto"
               />
-            </Link>
+            </ScrollToTopLink>
 
             <div className="hidden lg:flex items-center gap-8">
-              <Link to="/" className="text-[#0A2463] font-semibold hover:text-[#00A896] transition-colors">
+              <ScrollToTopLink to="/" className="text-[#0A2463] font-semibold hover:text-[#00A896] transition-colors">
                 Home
-              </Link>
+              </ScrollToTopLink>
 
               <div className="relative group">
                 <button className="flex items-center gap-1 text-[#1A202C] font-medium hover:text-[#00A896] transition-colors py-6">
@@ -68,43 +71,48 @@ const Header = () => {
                 </button>
                 <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
                   <div className="bg-white rounded-xl shadow-xl border border-[#E2E8F0] p-4 min-w-64">
-                    <Link to="/basic-student-training" className="block px-4 py-3 rounded-lg hover:bg-[#F0F4F9] transition-colors">
+                    <ScrollToTopLink to="/basic-student-training" className="block px-4 py-3 rounded-lg hover:bg-[#F0F4F9] transition-colors">
                       <div className="font-medium text-[#0A2463]">Basic Student Training</div>
                       <div className="text-sm text-[#64748B]">For first-time drivers</div>
-                    </Link>
-                    <Link to="/corporate-fleet-training" className="block px-4 py-3 rounded-lg hover:bg-[#F0F4F9] transition-colors mt-1">
+                    </ScrollToTopLink>
+                    <ScrollToTopLink to="/corporate-fleet-training" className="block px-4 py-3 rounded-lg hover:bg-[#F0F4F9] transition-colors mt-1">
                       <div className="font-medium text-[#0A2463]">Corporate Fleet Training</div>
                       <div className="text-sm text-[#64748B]">For companies & organizations</div>
-                    </Link>
-                    <Link to="/medical-safety-audit" className="block px-4 py-3 rounded-lg hover:bg-[#F0F4F9] transition-colors mt-1">
+                    </ScrollToTopLink>
+                    <ScrollToTopLink to="/medical-safety-audit" className="block px-4 py-3 rounded-lg hover:bg-[#F0F4F9] transition-colors mt-1">
                       <div className="font-medium text-[#0A2463]">Medical Safety Audit</div>
                       <div className="text-sm text-[#64748B]">Health screening & assessment</div>
-                    </Link>
-                    <Link to="/license-support" className="block px-4 py-3 rounded-lg hover:bg-[#F0F4F9] transition-colors mt-1">
+                    </ScrollToTopLink>
+                    <ScrollToTopLink to="/license-support" className="block px-4 py-3 rounded-lg hover:bg-[#F0F4F9] transition-colors mt-1">
                       <div className="font-medium text-[#0A2463]">License Support</div>
                       <div className="text-sm text-[#64748B]">FRSC documentation help</div>
-                    </Link>
+                    </ScrollToTopLink>
                   </div>
                 </div>
               </div>
 
-              <Link to="/about" className="text-[#1A202C] font-medium hover:text-[#00A896] transition-colors">
+              <ScrollToTopLink to="/about" className="text-[#1A202C] font-medium hover:text-[#00A896] transition-colors">
                 About
-              </Link>
-              <Link to="/blog" className="text-[#1A202C] font-medium hover:text-[#00A896] transition-colors">
+              </ScrollToTopLink>
+              <ScrollToTopLink to="/blog" className="text-[#1A202C] font-medium hover:text-[#00A896] transition-colors">
                 Blog
-              </Link>
-              <Link to="/faq" className="text-[#1A202C] font-medium hover:text-[#00A896] transition-colors">
+              </ScrollToTopLink>
+              <ScrollToTopLink to="/faq" className="text-[#1A202C] font-medium hover:text-[#00A896] transition-colors">
                 FAQ
-              </Link>
-              <Link to="/contact" className="text-[#1A202C] font-medium hover:text-[#00A896] transition-colors">
+              </ScrollToTopLink>
+              <ScrollToTopLink to="/contact" className="text-[#1A202C] font-medium hover:text-[#00A896] transition-colors">
                 Contact Us
-              </Link>
-
-              <button onClick={() => setIsBookingModalOpen(true)} className="flex flex-col items-center bg-[#0a2d82] hover:bg-[#1E3A8A] text-white px-6 py-2 rounded-lg font-semibold transition-colors shadow-lg shadow-[#0A2463]/20">
-                <span>Register Today</span>
-                <span className="text-[0.6rem] font-normal uppercase mt-1 items-center">See How it Works</span>
-              </button>
+              </ScrollToTopLink>
+              <div className="px-10"></div>
+              <div>
+                <button
+                  onClick={() => setIsBookingModalOpen(true)}
+                  className="bg-[#0a2d82] hover:bg-[#1E3A8A] text-white px-6 py-2 rounded-lg font-semibold transition-colors shadow-lg shadow-[#0A2463]/20 text-center"
+                >
+                  <div>Register Today</div>
+                  <div className="text-[0.6rem] font-normal uppercase mt-1">See How it Works</div>
+                </button>
+              </div>
             </div>
 
 
@@ -123,22 +131,22 @@ const Header = () => {
 
         <div className={`lg:hidden bg-white border-t border-[#E2E8F0] ${mobileMenuOpen ? 'block' : 'hidden'}`}>
           <div className="max-w-7xl mx-auto px-4 py-4 space-y-3">
-            <Link to="/" className="block py-2 text-[#0A2463] font-semibold">
+            <ScrollToTopLink to="/" className="block py-2 text-[#0A2463] font-semibold">
               Home
-            </Link>
+            </ScrollToTopLink>
             <div className="py-2">
               <div className="font-semibold text-[#0A2463] mb-2">Programs</div>
               <div className="pl-4 space-y-2">
-                <Link to="/basic-student-training" className="block py-2 text-[#64748B]">Basic Student Training</Link>
-                <Link to="/corporate-fleet-training" className="block py-2 text-[#64748B]">Corporate Fleet Training</Link>
-                <Link to="/medical-safety-audit" className="block py-2 text-[#64748B]">Medical Safety Audit</Link>
-                <Link to="/license-support" className="block py-2 text-[#64748B]">License Support</Link>
+                <ScrollToTopLink to="/basic-student-training" className="block py-2 text-[#64748B]">Basic Student Training</ScrollToTopLink>
+                <ScrollToTopLink to="/corporate-fleet-training" className="block py-2 text-[#64748B]">Corporate Fleet Training</ScrollToTopLink>
+                <ScrollToTopLink to="/medical-safety-audit" className="block py-2 text-[#64748B]">Medical Safety Audit</ScrollToTopLink>
+                <ScrollToTopLink to="/license-support" className="block py-2 text-[#64748B]">License Support</ScrollToTopLink>
               </div>
             </div>
-            <Link to="/about" className="block py-2 text-[#0A2463]">About Us</Link>
-            <Link to="/blog" className="block py-2 text-[#0A2463]">Blog</Link>
-            <Link to="/faq" className="block py-2 text-[#0A2463]">FAQ</Link>
-            <Link to="/contact" className="block py-2 text-[#0A2463]">Contact Us</Link>
+            <ScrollToTopLink to="/about" className="block py-2 text-[#0A2463]">About Us</ScrollToTopLink>
+            <ScrollToTopLink to="/blog" className="block py-2 text-[#0A2463]">Blog</ScrollToTopLink>
+            <ScrollToTopLink to="/faq" className="block py-2 text-[#0A2463]">FAQ</ScrollToTopLink>
+            <ScrollToTopLink to="/contact" className="block py-2 text-[#0A2463]">Contact Us</ScrollToTopLink>
             <div className="pt-4 border-t border-[#E2E8F0]">
               <button onClick={() => { setIsBookingModalOpen(true); setMobileMenuOpen(false); }} className="block w-full bg-[#0A2463] hover:bg-[#1E3A8A] text-white text-center py-3 rounded-lg font-semibold transition-colors">
                 Register & Start

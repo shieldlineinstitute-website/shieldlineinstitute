@@ -19,8 +19,8 @@ const BookingFormModal: React.FC<BookingFormModalProps> = ({ isOpen, onClose }) 
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-      <div className="bg-white rounded-3xl shadow-lg max-w-md w-full max-h-[90vh] overflow-y-auto relative">
+    <div className="fixed inset-0 bg-black bg-opacity-50 z-[60] p-4">
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-3xl shadow-lg max-w-md w-full max-h-[90vh] overflow-y-auto relative">
         {/* Close Button */}
         <button
           onClick={onClose}
@@ -46,7 +46,7 @@ const BookingFormModal: React.FC<BookingFormModalProps> = ({ isOpen, onClose }) 
         <div className="p-8">
           {state.succeeded ? (
             <div className="rounded-3xl bg-white p-8 shadow-sm max-w-md mx-auto text-center">
-              <p className="text-lg text-[#0A2463]">Thanks for your booking request! We'll get back to you soon.</p>
+              <p className="text-lg text-[#0A2463]">Thanks for your booking request! We'll get back to you within 24 hours.</p>
             </div>
           ) : (
             <div>

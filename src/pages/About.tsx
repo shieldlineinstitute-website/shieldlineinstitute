@@ -1,5 +1,5 @@
 import PageShell from '../components/PageShell';
-import { Link } from 'react-router-dom';
+import { ScrollToTopLink } from '../components/ScrollToTop';
 
 const faqs = [
   {
@@ -39,12 +39,12 @@ const About = () => {
         </div>
       </div>
       <div className="mt-12 inline-flex flex-wrap gap-4">
-        <Link to="/contact" className="inline-flex items-center gap-2 bg-[#0A2463] hover:bg-[#1E3A8A] text-white px-8 py-4 rounded-xl font-semibold transition-colors">
+        <ScrollToTopLink to="/contact" className="inline-flex items-center gap-2 bg-[#0A2463] hover:bg-[#1E3A8A] text-white px-8 py-4 rounded-xl font-semibold transition-colors">
           Contact the Team
-        </Link>
-        <Link to="/basic-student-training" className="inline-flex items-center gap-2 border border-[#0A2463] text-[#0A2463] px-8 py-4 rounded-xl font-semibold hover:bg-[#0A2463] hover:text-white transition-colors">
+        </ScrollToTopLink>
+        <ScrollToTopLink to="/basic-student-training" className="inline-flex items-center gap-2 border border-[#0A2463] text-[#0A2463] px-8 py-4 rounded-xl font-semibold hover:bg-[#0A2463] hover:text-white transition-colors">
           Explore Training
-        </Link>
+        </ScrollToTopLink>
       </div>
     </PageShell>
   );

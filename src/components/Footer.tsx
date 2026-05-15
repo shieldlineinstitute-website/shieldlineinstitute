@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { ScrollToTopLink } from './ScrollToTop';
 import shieldlogowhite from '../images/shieldlogowhite.png';
 
 const Footer = () => {
@@ -7,13 +7,13 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 lg:px-6 py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div className="lg:col-span-1">
-            <Link to="/" className="flex items-center mb-6">
+            <ScrollToTopLink to="/" className="flex items-center mb-6">
               <img
                 src={shieldlogowhite}
                 alt="Shieldline Driving Institute"
                 className="h-12 w-auto"
               />
-            </Link>
+            </ScrollToTopLink>
             <p className="text-white/70 mb-6 leading-relaxed">
               A reliable, doctor-led driving and road safety institute in Abijo-Lekki, Lagos. Training safer, healthier, and more confident drivers.
             </p>
@@ -36,16 +36,16 @@ const Footer = () => {
             <h4 className="text-lg font-bold mb-6">Programs</h4>
             <ul className="space-y-4">
               <li>
-                <Link to="/basic-student-training" className="text-white/70 hover:text-white transition-colors">Basic Student Training</Link>
+                <ScrollToTopLink to="/basic-student-training" className="text-white/70 hover:text-white transition-colors">Basic Student Training</ScrollToTopLink>
               </li>
               <li>
-                <Link to="/corporate-fleet-training" className="text-white/70 hover:text-white transition-colors">Corporate Fleet Training</Link>
+                <ScrollToTopLink to="/corporate-fleet-training" className="text-white/70 hover:text-white transition-colors">Corporate Fleet Training</ScrollToTopLink>
               </li>
               <li>
-                <Link to="/medical-safety-audit" className="text-white/70 hover:text-white transition-colors">Medical Safety Audit</Link>
+                <ScrollToTopLink to="/medical-safety-audit" className="text-white/70 hover:text-white transition-colors">Medical Safety Audit</ScrollToTopLink>
               </li>
               <li>
-                <Link to="/license-support" className="text-white/70 hover:text-white transition-colors">License Support</Link>
+                <ScrollToTopLink to="/license-support" className="text-white/70 hover:text-white transition-colors">License Support</ScrollToTopLink>
               </li>
             </ul>
           </div>
@@ -53,16 +53,16 @@ const Footer = () => {
             <h4 className="text-lg font-bold mb-6">Company</h4>
             <ul className="space-y-4">
               <li>
-                <Link to="/about" className="text-white/70 hover:text-white transition-colors">About Shieldline</Link>
+                <ScrollToTopLink to="/about" className="text-white/70 hover:text-white transition-colors">About Shieldline</ScrollToTopLink>
               </li>
               <li>
-                <Link to="/blog" className="text-white/70 hover:text-white transition-colors">Blog & Safety Tips</Link>
+                <ScrollToTopLink to="/blog" className="text-white/70 hover:text-white transition-colors">Blog & Safety Tips</ScrollToTopLink>
               </li>
               <li>
-                <Link to="/faq" className="text-white/70 hover:text-white transition-colors">FAQs</Link>
+                <ScrollToTopLink to="/faq" className="text-white/70 hover:text-white transition-colors">FAQs</ScrollToTopLink>
               </li>
               <li>
-                <Link to="/contact" className="text-white/70 hover:text-white transition-colors">Contact Us</Link>
+                <ScrollToTopLink to="/contact" className="text-white/70 hover:text-white transition-colors">Contact Us</ScrollToTopLink>
               </li>
             </ul>
           </div>

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { ScrollToTopLink } from './components/ScrollToTop';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import BookingFormModal from './components/BookingFormModal';
@@ -8,6 +8,7 @@ import studentpng from './images/student.png'
 import fleetpng from './images/fleetpng.png';
 import auditpng from './images/audit.png';
 import licensepng from './images/driving.png';
+import drivepng from './images/drivepng.png';
 
 const Homepage = () => {
   const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
@@ -19,7 +20,7 @@ const Homepage = () => {
           className="relative min-h-[90vh] flex items-center pt-20"
           style={{
             backgroundImage:
-              "url('https://assets.ls-assets.com/provider/istock/2255260540.jpg?w=1920')",
+              `url(${drivepng})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center'
           }}
@@ -45,9 +46,9 @@ const Homepage = () => {
                   <span>Register Now</span>
                   <i className="fa-solid fa-arrow-right"></i>
                 </button>
-                <Link to="/basic-student-training" className="bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white border border-white/30 px-8 py-4 rounded-lg font-semibold transition-all duration-300 flex items-center gap-2">
+                <ScrollToTopLink to="/basic-student-training" className="bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white border border-white/30 px-8 py-4 rounded-lg font-semibold transition-all duration-300 flex items-center gap-2">
                   <span>View Training Programs</span>
-                </Link>
+                </ScrollToTopLink>
               </div>
               <div className="flex flex-wrap gap-6">
                 <div className="flex items-center gap-2 text-white/80">
@@ -114,10 +115,10 @@ const Homepage = () => {
                     <span className="bg-[#F0F4F9] text-[#0A2463] px-4 py-2 rounded-full text-sm font-medium">Medicals Included</span>
                     <span className="bg-[#F0F4F9] text-[#0A2463] px-4 py-2 rounded-full text-sm font-medium">Dual Control</span>
                   </div>
-                  <Link to="/basic-student-training" className="inline-flex items-center gap-2 text-[#00A896] font-semibold hover:text-[#0A2463] transition-colors">
+                  <ScrollToTopLink to="/basic-student-training" className="inline-flex items-center gap-2 text-[#00A896] font-semibold hover:text-[#0A2463] transition-colors">
                     <span>View Full Program</span>
                     <i className="fa-solid fa-arrow-right"></i>
-                  </Link>
+                  </ScrollToTopLink>
                 </div>
               </div>
               <div className="bg-white rounded-3xl overflow-hidden shadow-lg shadow-[#0A2463]/5 group hover:shadow-2xl transition-all duration-500">
@@ -142,10 +143,10 @@ const Homepage = () => {
                     <span className="bg-[#F0F4F9] text-[#0A2463] px-4 py-2 rounded-full text-sm font-medium">On-Site Training</span>
                     <span className="bg-[#F0F4F9] text-[#0A2463] px-4 py-2 rounded-full text-sm font-medium">Driver Assessment</span>
                   </div>
-                  <Link to="/corporate-fleet-training" className="inline-flex items-center gap-2 text-[#D4AF37] font-semibold hover:text-[#0A2463] transition-colors">
+                  <ScrollToTopLink to="/corporate-fleet-training" className="inline-flex items-center gap-2 text-[#D4AF37] font-semibold hover:text-[#0A2463] transition-colors">
                     <span>Request Corporate Proposal</span>
                     <i className="fa-solid fa-arrow-right"></i>
-                  </Link>
+                  </ScrollToTopLink>
                 </div>
               </div>
               <div className="bg-white rounded-3xl overflow-hidden shadow-lg shadow-[#0A2463]/5 group hover:shadow-2xl transition-all duration-500">
@@ -170,10 +171,10 @@ const Homepage = () => {
                     <span className="bg-[#F0F4F9] text-[#0A2463] px-4 py-2 rounded-full text-sm font-medium">Doctor Reviewed</span>
                     <span className="bg-[#F0F4F9] text-[#0A2463] px-4 py-2 rounded-full text-sm font-medium">Privacy Protected</span>
                   </div>
-                  <Link to="/medical-safety-audit" className="inline-flex items-center gap-2 text-[#00A896] font-semibold hover:text-[#0A2463] transition-colors">
+                  <ScrollToTopLink to="/medical-safety-audit" className="inline-flex items-center gap-2 text-[#00A896] font-semibold hover:text-[#0A2463] transition-colors">
                     <span>Book Screening</span>
                     <i className="fa-solid fa-arrow-right"></i>
-                  </Link>
+                  </ScrollToTopLink>
                 </div>
               </div>
               <div className="bg-white rounded-3xl overflow-hidden shadow-lg shadow-[#0A2463]/5 group hover:shadow-2xl transition-all duration-500">
@@ -198,10 +199,10 @@ const Homepage = () => {
                     <span className="bg-[#F0F4F9] text-[#0A2463] px-4 py-2 rounded-full text-sm font-medium">FRSC Guidance</span>
                     <span className="bg-[#F0F4F9] text-[#0A2463] px-4 py-2 rounded-full text-sm font-medium">Step-by-Step</span>
                   </div>
-                  <Link to="/license-support" className="inline-flex items-center gap-2 text-[#F59E0B] font-semibold hover:text-[#0A2463] transition-colors">
+                  <ScrollToTopLink to="/license-support" className="inline-flex items-center gap-2 text-[#F59E0B] font-semibold hover:text-[#0A2463] transition-colors">
                     <span>Learn More</span>
                     <i className="fa-solid fa-arrow-right"></i>
-                  </Link>
+                  </ScrollToTopLink>
                 </div>
               </div>
             </div>
@@ -361,10 +362,10 @@ const Homepage = () => {
               </div>
             </div>
             <div className="text-center mt-14">
-              <Link to="/contact" className="inline-flex items-center gap-2 bg-[#00A896] hover:bg-[#00D9B5] text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 shadow-xl shadow-[#00A896]/30">
+              <ScrollToTopLink to="/contact" className="inline-flex items-center gap-2 bg-[#00A896] hover:bg-[#00D9B5] text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 shadow-xl shadow-[#00A896]/30">
                 <span>Start Your Journey Today</span>
                 <i className="fa-solid fa-arrow-right"></i>
-              </Link>
+              </ScrollToTopLink>
             </div>
           </div>
         </section>
@@ -384,10 +385,10 @@ const Homepage = () => {
               Book your free consultation today and begin your journey to becoming a safer, more confident driver with Shieldline Driving Institute.
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-12">
-              <Link to="/contact" className="bg-[#00A896] hover:bg-[#00D9B5] text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 shadow-xl shadow-[#00A896]/30 flex items-center gap-2 text-lg">
+              <ScrollToTopLink to="/contact" className="bg-[#00A896] hover:bg-[#00D9B5] text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 shadow-xl shadow-[#00A896]/30 flex items-center gap-2 text-lg">
                 <i className="fa-solid fa-calendar-check"></i>
                 <span>Register & Start</span>
-              </Link>
+              </ScrollToTopLink>
               <a href="https://wa.me/2348084915273" target="_blank" rel="noreferrer" className="bg-[#25D366] hover:bg-[#20BD5A] text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 shadow-xl shadow-[#25D366]/30 flex items-center gap-2 text-lg">
                 <i className="fa-brands fa-whatsapp text-xl"></i>
                 <span>WhatsApp Us</span>

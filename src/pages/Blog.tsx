@@ -1,5 +1,5 @@
 import PageShell from '../components/PageShell';
-import { Link } from 'react-router-dom';
+import { ScrollToTopLink } from '../components/ScrollToTop';
 import { useBlogPosts } from '../hooks/useBlogPosts';
 
 const Blog = () => {
@@ -75,12 +75,12 @@ const Blog = () => {
         )}
       </div>
       <div className="mt-12 inline-flex flex-wrap gap-4">
-        <Link to="/contact" className="inline-flex items-center gap-2 bg-[#00A896] hover:bg-[#00D9B5] text-white px-8 py-4 rounded-xl font-semibold transition-colors">
+        <ScrollToTopLink to="/contact" className="inline-flex items-center gap-2 bg-[#00A896] hover:bg-[#00D9B5] text-white px-8 py-4 rounded-xl font-semibold transition-colors">
           Ask a Question
-        </Link>
-        <Link to="/about" className="inline-flex items-center gap-2 border border-[#0A2463] text-[#0A2463] px-8 py-4 rounded-xl font-semibold hover:bg-[#0A2463] hover:text-white transition-colors">
+        </ScrollToTopLink>
+        <ScrollToTopLink to="/about" className="inline-flex items-center gap-2 border border-[#0A2463] text-[#0A2463] px-8 py-4 rounded-xl font-semibold hover:bg-[#0A2463] hover:text-white transition-colors">
           Learn More About Shieldline
-        </Link>
+        </ScrollToTopLink>
       </div>
     </PageShell>
   );

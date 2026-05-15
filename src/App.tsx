@@ -9,10 +9,12 @@ import CorporateFleetTraining from './pages/CorporateFleetTraining';
 import MedicalSafetyAudit from './pages/MedicalSafetyAudit';
 import LicenseSupport from './pages/LicenseSupport';
 import NotFound from './pages/NotFound';
+import { ScrollToTop } from './components/ScrollToTop';
 
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/basic-student-training" element={<BasicStudentTraining />} />

@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { ScrollToTopLink } from '../components/ScrollToTop';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 
@@ -15,8 +15,8 @@ const NotFound = () => {
               The page you’re looking for does not exist. Use the links below to continue exploring Shieldline Institute.
             </p>
             <div className="inline-flex flex-wrap justify-center gap-4">
-              <Link to="/" className="bg-[#0A2463] hover:bg-[#1E3A8A] text-white px-8 py-4 rounded-xl font-semibold transition-colors">Home</Link>
-              <Link to="/contact" className="border border-[#0A2463] text-[#0A2463] px-8 py-4 rounded-xl font-semibold hover:bg-[#0A2463] hover:text-white transition-colors">Contact</Link>
+              <ScrollToTopLink to="/" className="bg-[#0A2463] hover:bg-[#1E3A8A] text-white px-8 py-4 rounded-xl font-semibold transition-colors">Home</ScrollToTopLink>
+              <ScrollToTopLink to="/contact" className="border border-[#0A2463] text-[#0A2463] px-8 py-4 rounded-xl font-semibold hover:bg-[#0A2463] hover:text-white transition-colors">Contact</ScrollToTopLink>
             </div>
           </div>
         </section>
